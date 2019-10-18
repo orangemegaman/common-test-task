@@ -4,8 +4,8 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "start:dev": "cross-env NODE_ENV=development webpack-dev-server --progress",
-        "start:prod": "cross-env NODE_ENV=production webpack --progress",
+        "start": "cross-env NODE_ENV=development webpack-dev-server --progress",
+        "build": "cross-env NODE_ENV=production webpack --progress",
         "analyze:eslint": "./node_modules/.bin/eslint *.js src/**/*.js",
         "env": "copy .env.defaults .env"
     },

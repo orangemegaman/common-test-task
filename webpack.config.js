@@ -7,6 +7,7 @@ const Dotenv = require('dotenv-webpack');
 
 const publicFolder = path.resolve(__dirname, 'public');
 const srcFolder = path.resolve(__dirname, 'src');
+const nodeModulesFolder = path.resolve(__dirname, 'node_modules');
 
 const config = {
 	mode: process.env.NODE_ENV,
@@ -75,8 +76,7 @@ const config = {
 			},
 			{
 				test: /\.(scss|css|sass)$/,
-				exclude: path.join(__dirname, '../node_modules'),
-				// include: [path.resolve(srcFolder, 'components')],
+				exclude: nodeModulesFolder,
 				use: [
 					'style-loader',
 					MiniCssExtractPlugin.loader,
